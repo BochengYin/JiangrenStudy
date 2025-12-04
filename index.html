@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Setup Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <h1>Join Our Creative Cohort</h1>
+      <p>Share your details so we can tailor learning paths that fit you best.</p>
+    </header>
+
+    <!-- Structured form with semantic controls and HTML5 validation -->
+    <form class="profile-form" action="#" method="post">
+      <div class="form-grid">
+        <label class="field">
+          <span>First Name</span>
+          <input type="text" id="first-name" name="first-name" placeholder="Ada" required>
+        </label>
+
+        <label class="field">
+          <span>Last Name</span>
+          <input type="text" id="last-name" name="last-name" placeholder="Lovelace" required>
+        </label>
+
+        <label class="field full">
+          <span>Email Address</span>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="At least 8 characters"
+            minlength="8"
+            pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+\-={}\[\]|:;\"'<>.,?/]{8,}"
+            title="Use 8+ characters with letters and numbers"
+            autocomplete="new-password"
+            required>
+        </label>
+
+        <label class="field">
+          <span>Confirm Password</span>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Repeat your password"
+            minlength="8"
+            autocomplete="new-password"
+            oninput="this.setCustomValidity(''); if (this.value !== password.value) { this.setCustomValidity('Passwords must match.'); }"
+            required>
+        </label>
+
+        <label class="field">
+          <span>Date of Birth</span>
+          <input type="date" id="dob" name="dob" required>
+        </label>
+
+        <fieldset class="field">
+          <legend>Gender</legend>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </fieldset>
+
+        <label class="field full">
+          <span>About Me</span>
+          <textarea id="about" name="about" rows="4" placeholder="Tell us about your goals" required></textarea>
+        </label>
+
+        <label class="field full">
+          <span>Choose Your Profession</span>
+          <select id="profession" name="profession" required>
+            <option value="" disabled selected>Select a path</option>
+            <option>Web Development</option>
+            <option>Data Analytics</option>
+            <option>UI/UX Design</option>
+            <option>Cybersecurity</option>
+            <option>Product Management</option>
+          </select>
+        </label>
+      </div>
+
+      <button type="submit" class="submit">Submit Profile</button>
+    </form>
+  </div>
+</body>
+</html>
