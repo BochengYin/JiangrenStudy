@@ -110,17 +110,20 @@ section {
     outline-offset: 2px;
 }
 
+.btn-primary,
 .primary-button {
     background-color: var(--primary);
     color: #fff;
     box-shadow: var(--shadow);
 }
 
+.btn-primary:hover,
 .primary-button:hover {
     background-color: var(--primary-dark);
     transform: translateY(-1px);
 }
 
+.btn-secondary,
 .secondary-button {
     background-color: var(--bg-soft);
     color: var(--text-muted);
@@ -188,6 +191,215 @@ section {
 .hero-gallery {
     display: grid;
     gap: 1.25rem;
+}
+
+.ui-kit-section {
+    background-color: #fff;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+}
+
+.section-title {
+    margin: 0.4rem 0 0.75rem;
+}
+
+.component-stack {
+    display: grid;
+    gap: 2rem;
+}
+
+.component-block {
+    border: 1px solid var(--border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.component-title {
+    margin: 0;
+}
+
+.component-description {
+    color: var(--text-muted);
+    margin: 0.5rem 0 1.5rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+.card-feature {
+    box-shadow: var(--shadow);
+}
+
+.card-header,
+.card-body,
+.card-footer {
+    padding: 1.5rem;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card-body {
+    flex: 1;
+    color: var(--text-muted);
+}
+
+.card-footer {
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+.card-role {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.95rem;
+    border-radius: 999px;
+    background-color: var(--bg-soft);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.badge-pill {
+    background-color: #e0f2fe;
+    color: #0c4a6e;
+    border-color: #bae6fd;
+}
+
+.avatar {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.avatar-small {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-menu {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.avatar-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background-color: #fff;
+    cursor: pointer;
+    font: inherit;
+}
+
+.avatar-trigger:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.avatar-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.avatar-role {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.avatar-caret {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.menu-panel {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    min-width: 220px;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    text-align: left;
+    color: #0f172a;
+    border: none;
+    background: transparent;
+    display: block;
+    cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+    background-color: var(--bg-soft);
 }
 
 .preview-card {
