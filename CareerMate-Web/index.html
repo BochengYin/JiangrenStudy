@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,34 +7,224 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header1 ">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-icon">
-                    C
-                </span>
-                <span class="logo-class">
-                    CareerMate AI
-                </span>
+    <header class="site-header">
+        <nav class="container nav">
+            <a class="logo" href="#">
+                <span class="logo-icon">C</span>
+                <span class="logo-wordmark">CareerMate AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="#">Features</a>
+                <a href="#">Docs</a>
+                <a href="#">Pricing</a>
             </div>
-            <nav class="nav">
-                <a href="" class="nav-links">Features</a>
-                <a href="" class="nav-links">Docs</a>
-                <div>
-                    <button class="primary-button btn">Sign In</button>
-                    <button class="secondary-button btn">Get Pro</button>
-                </div>
-            </nav>
-        </div>
+            <div class="nav-cta">
+                <button class="btn secondary-button">Sign In</button>
+                <button class="btn primary-button">Get Pro Access</button>
+            </div>
+        </nav>
     </header>
     <main>
-        <!-- hero section -->
-         <section class="hero-section">
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow">AI Career Coach · Beta Preview</p>
+                    <h1>Bring confidence to every interview with CareerMate.</h1>
+                    <p>
+                        Practice interviews, get instant coaching, and build tailored prep plans —
+                        all powered by CareerMate AI so you show up ready for anything.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn primary-button">Start Practicing</button>
+                        <button class="btn ghost-button">See How It Works</button>
+                    </div>
+                    <ul class="hero-stats">
+                        <li><strong>25k+</strong><span>Mock interviews run</span></li>
+                        <li><strong>92%</strong><span>Report higher confidence</span></li>
+                        <li><strong>1:1</strong><span>Personalized coaching</span></li>
+                    </ul>
+                </div>
+                <div class="hero-gallery" aria-label="Preview cards">
+                    <article class="preview-card">
+                        <img src="https://placehold.co/280x160/111827/FFFFFF?text=AI+Feedback" alt="AI feedback preview">
+                        <h3>Feedback Summary</h3>
+                        <p>Instant highlights on clarity, structure, and tone.</p>
+                    </article>
+                    <article class="preview-card">
+                        <img src="https://placehold.co/280x160/0f172a/93c5fd?text=Practice" alt="Practice session preview">
+                        <h3>Practice Session</h3>
+                        <p>Simulate behavioral and technical interviews.</p>
+                    </article>
+                    <article class="preview-card">
+                        <img src="https://placehold.co/280x160/1f2937/f8fafc?text=Insights" alt="Insights preview">
+                        <h3>Insight Cards</h3>
+                        <p>Track improvement areas across sessions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-         </section>
+        <section class="problem-section">
+            <div class="container problem-grid">
+                <div class="problem-content">
+                    <p class="eyebrow">Still struggling?</p>
+                    <h2>Still struggling to show your best work in interviews?</h2>
+                    <p>CareerMate turns messy preparation into a focused plan with AI-powered guidance.</p>
+                    <ul>
+                        <li>Not sure which questions to expect.</li>
+                        <li>Feedback that arrives too late.</li>
+                        <li>Nerves that derail the story.</li>
+                        <li>Practice that never feels real.</li>
+                    </ul>
+                </div>
+                <aside class="promo-card" aria-label="Promo card">
+                    <p class="eyebrow">CareerMate Pro</p>
+                    <h3>Your personal AI prep room</h3>
+                    <p>Unlimited mock sessions, targeted drills, and expert templates curated for your goals.</p>
+                    <button class="btn primary-button">Unlock Pro Today</button>
+                </aside>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <header>
+                    <p class="eyebrow">Everything you need</p>
+                    <h2>Everything you need to land the interview.</h2>
+                    <p>Mix structured practice, instant feedback, and AI insights to improve every day.</p>
+                </header>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h3>Personalized Plans</h3>
+                        <p>CareerMate builds a prep roadmap tuned to your target role and timeline.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🗣️</span>
+                        <h3>Mock Interviews</h3>
+                        <p>Simulate realistic interview flows with voice or text-based practice.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <h3>Instant Feedback</h3>
+                        <p>Get coaching on storytelling, structure, and keywords immediately after sessions.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">📈</span>
+                        <h3>Progress Insights</h3>
+                        <p>See trends, strengths, and opportunities in a simple dashboard.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <div class="container demo-grid">
+                <div class="demo-steps">
+                    <p class="eyebrow">See CareerMate AI In Action</p>
+                    <h2>From question to confident answer in minutes.</h2>
+                    <ol>
+                        <li>Choose your role or upload a job description.</li>
+                        <li>Run a mock interview with voice-enabled AI.</li>
+                        <li>Receive structured feedback and next steps instantly.</li>
+                    </ol>
+                </div>
+                <div class="chat-preview" aria-label="Chat demo">
+                    <div class="chat-message bot">
+                        Hi, I'm CareerMate AI. Ready for a behavioral warm-up?
+                    </div>
+                    <div class="chat-message user">
+                        Let's practice conflict resolution stories.
+                    </div>
+                    <div class="chat-message bot">
+                        Great! Tell me about a time you disagreed with a teammate. I'll coach you live.
+                    </div>
+                    <div class="chat-message note">
+                        ✓ Coaching tip: emphasize data, collaboration, and result.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-section">
+            <div class="container tech-content">
+                <p class="eyebrow">Built with the Power...</p>
+                <h2>Built with the power of leading AI infrastructure.</h2>
+                <p>Secure architecture powered by trusted partners keeps your preparation private.</p>
+                <div class="tech-arc">
+                    <span class="tech-pill">OpenAI</span>
+                    <span class="tech-pill">Azure AI</span>
+                    <span class="tech-pill">Google Cloud</span>
+                    <span class="tech-pill">Whisper Speech</span>
+                    <span class="tech-pill">Vector Search</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <p class="eyebrow">Trusted by Students...</p>
+                <h2>Trusted by students and job seekers worldwide.</h2>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <p>“CareerMate helped me go from nervous to ready in a week. The AI coach gave me the exact prompts I needed.”</p>
+                        <div>
+                            <strong>Avery Chen</strong>
+                            <span>Product Design Intern</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>“The mock interviews felt real and the follow-up notes showed me where to improve.”</p>
+                        <div>
+                            <strong>Diego Patel</strong>
+                            <span>Business Analyst</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>“Having instant structure guides made storytelling so much easier.”</p>
+                        <div>
+                            <strong>Maya Johnson</strong>
+                            <span>Computer Science Student</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-banner">
+                <div>
+                    <p class="eyebrow">Ready to practice smarter?</p>
+                    <h2>Claim your seat in the CareerMate beta and stay interview-ready.</h2>
+                    <p>Join the waitlist to unlock early features and exclusive prep events.</p>
+                </div>
+                <div class="cta-actions">
+                    <input type="email" placeholder="Enter your email" aria-label="Email address">
+                    <button class="btn primary-button">Join the Waitlist</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-
+        <div class="container footer-grid">
+            <div>
+                <div class="logo">
+                    <span class="logo-icon">C</span>
+                    <span class="logo-wordmark">CareerMate AI</span>
+                </div>
+                <p>AI-powered practice for your next big interview.</p>
+            </div>
+            <nav aria-label="Footer navigation">
+                <a href="#">Features</a>
+                <a href="#">Templates</a>
+                <a href="#">Support</a>
+            </nav>
+            <div class="footer-meta">
+                <p>© <span id="year">2024</span> CareerMate Labs. All rights reserved.</p>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
     </footer>
     <script src="app.js"></script>
 </body>
