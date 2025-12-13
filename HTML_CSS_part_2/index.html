@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card UI Implementation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="eyebrow">Card UI Study</p>
+      <h1>UX Research &amp; Testimonials</h1>
+      <p>
+        A responsive recreation of two card layouts with gradients, subtle shadows,
+        accessible typography, and hover states. Resize the viewport to preview the
+        adaptive behavior.
+      </p>
+    </header>
+
+    <section class="card-grid course-cards" aria-label="Featured learning paths">
+      <article class="card course-card" id="ux-card">
+        <h2>UX Research</h2>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <a class="ghost-button" href="#ux">Learn More</a>
+      </article>
+
+      <article class="card course-card" id="bootcamp-card">
+        <h2>Bootcamp</h2>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <a class="ghost-button" href="#bootcamp">Learn More</a>
+      </article>
+    </section>
+
+    <section class="card-grid testimonial-cards" aria-label="Student testimonials">
+      <article class="card testimonial-card">
+        <div class="author">
+          <div class="avatar">BJ</div>
+          <div>
+            <h3>Bobby Jennings</h3>
+            <p>Founder &amp; CEO, <span class="accent">Sketch App</span></p>
+          </div>
+          <div class="rating" aria-label="5 of 5 stars">★★★★★</div>
+        </div>
+        <p>
+          All users on MySpace will know that there are millions of people out there.
+          Every day besides so many people joining this community, there are many others
+          who will be looking out for friends.
+        </p>
+      </article>
+
+      <article class="card testimonial-card emphasis">
+        <div class="author">
+          <div class="avatar">DB</div>
+          <div>
+            <h3>Donald Bridges</h3>
+            <p>Founder &amp; CEO, <span class="accent">Adobe</span></p>
+          </div>
+          <div class="rating" aria-label="5 of 5 stars">★★★★★</div>
+        </div>
+        <p>
+          All users on MySpace will know that there are millions of people out there.
+          Every day besides so many people joining this community, there are many others
+          who will be looking out for friends.
+        </p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
