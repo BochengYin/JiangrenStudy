@@ -1,0 +1,152 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 2rem;
+}
+
+/* 
+   GRID LAYOUT SYSTEM
+   --------------------------------------------------
+   Here we define the main layout using CSS Grid.
+*/
+.grid-container {
+    display: grid;
+
+    /* 
+       grid-template-columns: defines the number and width of columns.
+       repeat(auto-fit, minmax(300px, 1fr)):
+       - auto-fit: creates as many columns as will fit in the container
+       - minmax(300px, 1fr): columns will be at least 300px wide, 
+         but will stretch (1fr) to fill available space.
+       This one line makes the grid responsive without media queries!
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    /* Gap between grid items */
+    gap: 2rem;
+
+    /* Constrain main width and center it */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 
+   ADVANCED GRID - TEMPLATE AREAS (Optional Demo)
+   You can also name areas for more complex layouts.
+   Uncomment below to see how it might work with specific classes.
+*/
+/*
+.grid-layout-advanced {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "main main sidebar"
+        "footer footer footer";
+}
+*/
+
+/* 
+   FLEXBOX CARD COMPONENT
+   --------------------------------------------------
+   Here we use Flexbox to manage the internal layout of the card.
+*/
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Flex container for vertical stacking */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+
+    /* 
+       Making the content area a flex container too 
+       allows us to push the footer to the bottom if needed.
+    */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Fills remaining height if card height is fixed */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.card-action {
+    /* Pushes the button to the bottom of the card content */
+    margin-top: auto;
+    align-self: flex-start;
+    /* Aligns button to left */
+
+    background-color: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.card-action:hover {
+    background-color: #2b6cb0;
+}
+
+/* 
+   RESPONSIVE ADJUSTMENTS
+   --------------------------------------------------
+   Although our grid is auto-responsive, we can enforce specific layouts 
+   at certain breakpoints using Media Queries.
+*/
+
+/* Mobile Device (< 600px) */
+@media (max-width: 600px) {
+    .grid-container {
+        /* Force single column on very small screens if desired */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Tablet Device (600px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .grid-container {
+        /* Force 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

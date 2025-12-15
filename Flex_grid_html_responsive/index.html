@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid & Flexbox Masterclass</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 style="text-align: center; margin-bottom: 2rem; color: #2d3748;">CSS Grid & Flexbox Gallery</h1>
+
+    <!-- 
+      Grid Container
+      This element lays out its direct children using the CSS Grid lines defined in style.css 
+    -->
+    <div class="grid-container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <!-- Flex Item 1: Image -->
+            <img src="assets/card-1.png" alt="Mountain Landscape" class="card-image">
+            <!-- Flex Item 2: Content Container -->
+            <div class="card-content">
+                <h2 class="card-title">Mountain Escape</h2>
+                <p class="card-text">Explore the serene beauty of high-altitude peaks. Perfect for hiking and
+                    photography enthusiasts seeking adventure.</p>
+                <!-- Flex Item 3 (Nested): Action Button -->
+                <a href="#" class="card-action">Learn Grid</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="assets/card-2.png" alt="Forest Path" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Forest Trails</h2>
+                <p class="card-text">Get lost in the lush greenery of ancient forests. A peaceful retreat to reconnect
+                    with nature's rhythm and Flexbox alignment.</p>
+                <a href="#" class="card-action">Explore Flex</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="assets/card-3.png" alt="Starry Night" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Starry Nights</h2>
+                <p class="card-text">Witness the cosmos under the clearest skies. Learn how `justify-content` can align
+                    your stars perfectly.</p>
+                <a href="#" class="card-action">View Code</a>
+            </div>
+        </div>
+
+        <!-- Card 4 (Duplicate for Grid Demo) -->
+        <div class="card">
+            <img src="assets/card-1.png" alt="Mountain Landscape" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Responsive Design</h2>
+                <p class="card-text">Resize your browser window to see how `auto-fit` and `minmax` work together to
+                    create a fluid layout automatically.</p>
+                <a href="#" class="card-action">Try It</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
