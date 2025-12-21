@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Pricing Cards</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="pricing" aria-labelledby="pricing-title">
+        <header class="pricing__header">
+          <h1 id="pricing-title" class="pricing__title">Pricing</h1>
+          <p class="pricing__subtitle">Choose the plan that fits your needs.</p>
+        </header>
+
+        <div class="pricing__grid" role="list">
+          <article class="card card--basic" role="listitem" data-plan="Basic">
+            <div class="card__priceWrap" aria-hidden="true">
+              <div class="priceBadge priceBadge--basic">
+                <span class="priceBadge__currency">$</span>
+                <span class="priceBadge__amount">19</span>
+              </div>
+            </div>
+
+            <h2 class="card__title">Basic</h2>
+            <div class="card__divider" aria-hidden="true"></div>
+ 
+            <ul class="card__features" aria-label="Basic features">
+              <li class="feature feature--ok">
+                <span class="feature__text">One Selected Template</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--ok">
+                <span class="feature__text">100% Responsive Design</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--no">
+                <span class="feature__text">Credit Remove Permission</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--no">
+                <span class="feature__text">Lifetime Template Updates</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </span>
+              </li>
+            </ul>
+
+            <button class="card__button" type="button">Purchase</button>
+          </article>
+
+          <article class="card card--premium" role="listitem" data-plan="Premium">
+            <div class="card__priceWrap" aria-hidden="true">
+              <div class="priceBadge priceBadge--premium">
+                <span class="priceBadge__currency">$</span>
+                <span class="priceBadge__amount">49</span>
+              </div>
+            </div>
+
+            <h2 class="card__title">Premium</h2>
+            <div class="card__divider" aria-hidden="true"></div>
+
+            <ul class="card__features" aria-label="Premium features">
+              <li class="feature feature--ok">
+                <span class="feature__text">Five Existing Templates</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--ok">
+                <span class="feature__text">100% Responsive Design</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--ok">
+                <span class="feature__text">Credit Remove Permission</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--no">
+                <span class="feature__text">Lifetime Template Updates</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </span>
+              </li>
+            </ul>
+
+            <button class="card__button" type="button">Purchase</button>
+          </article>
+
+          <article class="card card--ultimate" role="listitem" data-plan="Ultimate">
+            <div class="card__priceWrap" aria-hidden="true">
+              <div class="priceBadge priceBadge--ultimate">
+                <span class="priceBadge__currency">$</span>
+                <span class="priceBadge__amount">99</span>
+              </div>
+            </div>
+
+            <h2 class="card__title">Ultimate</h2>
+            <div class="card__divider" aria-hidden="true"></div>
+
+            <ul class="card__features" aria-label="Ultimate features">
+              <li class="feature feature--ok">
+                <span class="feature__text">All Existing Templates</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--ok">
+                <span class="feature__text">100% Responsive Design</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--ok">
+                <span class="feature__text">Credit Remove Permission</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="feature feature--ok">
+                <span class="feature__text">Lifetime Template Updates</span>
+                <span class="feature__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+              </li>
+            </ul>
+
+            <button class="card__button" type="button">Purchase</button>
+          </article>
+        </div>
+
+        <p class="srOnly" aria-live="polite" id="purchase-status"></p>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
