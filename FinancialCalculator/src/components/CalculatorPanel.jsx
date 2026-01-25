@@ -1,9 +1,25 @@
+import { useState } from 'react';
+
 function CalculatorPanel() {
-    // Step 2: Static version - Hardcoded values
-    const taxableIncome = 0;
-    const incomeTax = 0;
-    const netIncome = 0;
-    const effectiveRate = 0;
+    const [inputIncome, setInputIncome] = useState('');
+    const [result, setResult] = useState({
+        taxableIncome: 0,
+        incomeTax: 0,
+        netIncome: 0,
+        effectiveRate: 0
+    });
+
+    const handleInputChange = (e) => {
+        setInputIncome(e.target.value);
+    };
+
+    const formatCurrency = (val) => {
+        return new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD' }).format(val);
+    };
+
+    const formatPercentage = (val) => {
+        return (val * 100).toFixed(2) + '%';
+    };
 
     return (
         <div className="card">
@@ -17,6 +33,8 @@ function CalculatorPanel() {
                         type="number"
                         className="money-input"
                         placeholder="0"
+                        value={inputIncome}
+                        onChange={handleInputChange}
                     />
                 </div>
             </div>
@@ -27,19 +45,19 @@ function CalculatorPanel() {
                 <h3>Results</h3>
                 <div className="result-row">
                     <span>Taxable Income:</span>
-                    <span className="result-value">$0.00</span>
+                    <span className="result-value">{formatCurrency(result.taxableIncome)}</span>
                 </div>
                 <div className="result-row">
                     <span>Income Tax:</span>
-                    <span className="result-value highlight">$0.00</span>
+                    <span className="result-value highlight">{formatCurrency(result.incomeTax)}</span>
                 </div>
                 <div className="result-row total">
                     <span>Net Income:</span>
-                    <span className="result-value">$0.00</span>
+                    <span className="result-value">{formatCurrency(result.netIncome)}</span>
                 </div>
                 <div className="result-row">
                     <span>Effective Tax Rate:</span>
-                    <span className="result-value">0.00%</span>
+                    <span className="result-value">{formatPercentage(result.effectiveRate)}</span>
                 </div>
             </div>
         </div>

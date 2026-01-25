@@ -1,12 +1,12 @@
+import { useState } from 'react';
 import { taxBrackets } from './data';
 import YearSelector from './components/YearSelector';
 import TaxRatesTable from './components/TaxRatesTable';
 import CalculatorPanel from './components/CalculatorPanel';
 
 function App() {
-  // Step 2: Static Version - Hardcode state passed as props
-  const years = Object.keys(taxBrackets); // ['FY 2023-24', 'FY 2024-25', ...]
-  const selectedYear = 'FY 2024-25';
+  const years = Object.keys(taxBrackets);
+  const [selectedYear, setSelectedYear] = useState('FY 2024-25');
   const currentRates = taxBrackets[selectedYear];
 
   return (
@@ -29,5 +29,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
