@@ -1,5 +1,5 @@
-function YearSelector({ years, selectedYear }) {
-    // Step 2: Static Version - Buttons don't work yet, just display
+function YearSelector({ years, selectedYear, onSelectYear }) {
+    // Step 5: Add Inverse Data Flow - onSelectYear callback
     return (
         <div className="year-selector">
             <span style={{ alignSelf: 'center', fontWeight: 500, marginRight: '1rem' }}>
@@ -9,6 +9,7 @@ function YearSelector({ years, selectedYear }) {
                 <button
                     key={year}
                     className={`year-btn ${selectedYear === year ? 'active' : ''}`}
+                    onClick={() => onSelectYear(year)}
                 >
                     {year}
                 </button>

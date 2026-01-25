@@ -17,6 +17,7 @@ function App() {
       <YearSelector
         years={years}
         selectedYear={selectedYear}
+        onSelectYear={setSelectedYear}
       />
 
       <div className="calculator-grid">
@@ -24,7 +25,7 @@ function App() {
           year={selectedYear}
           rates={currentRates}
         />
-        <CalculatorPanel />
+        <CalculatorPanel currentRates={currentRates} />
       </div>
     </div>
   );

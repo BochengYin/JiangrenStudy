@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function CalculatorPanel() {
+function CalculatorPanel({ currentRates }) {
     const [inputIncome, setInputIncome] = useState('');
     const [result, setResult] = useState({
         taxableIncome: 0,
@@ -11,6 +11,33 @@ function CalculatorPanel() {
 
     const handleInputChange = (e) => {
         setInputIncome(e.target.value);
+    };
+
+    const calculateTax = () => {
+        const income = parseFloat(inputIncome);
+        if (isNaN(income) || income < 0) {
+            alert("Please enter a valid income");
+            return;
+        }
+
+        let tax = 0;
+        for (const bracket of currentRates) {
+            if (income >= bracket.min && income <= bracket.max) {
+                const excessAmount = income - (bracket.min - 1);
+                tax = bracket.base + (excessAmount * bracket.rate);
+                break;
+            }
+        }
+
+        const net = income - tax;
+        const rate = income > 0 ? tax / income : 0;
+
+        setResult({
+            taxableIncome: income,
+            incomeTax: tax,
+            netIncome: net,
+            effectiveRate: rate
+        });
     };
 
     const formatCurrency = (val) => {
@@ -39,7 +66,7 @@ function CalculatorPanel() {
                 </div>
             </div>
 
-            <button className="calculate-btn">Calculate Tax</button>
+            <button className="calculate-btn" onClick={calculateTax}>Calculate Tax</button>
 
             <div className="result-box">
                 <h3>Results</h3>
